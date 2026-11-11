@@ -1,6 +1,5 @@
 package Ejercicio2;
 
-// Clase abstracta Empleado
 public abstract class Empleado {
     protected String nombre;
 
@@ -8,16 +7,13 @@ public abstract class Empleado {
         this.nombre = nombre;
     }
 
-    // Método abstracto
     public abstract double calcularSalario();
 
-    // Método concreto
     public void mostrarDetalles() {
         System.out.println("Empleado: " + nombre + " | Salario calculado: " + calcularSalario());
     }
 }
 
-// Clase Gerente
 class Gerente extends Empleado {
     private double salarioBase;
     private double bono;
@@ -34,7 +30,6 @@ class Gerente extends Empleado {
     }
 }
 
-// Clase Vendedor
 class Vendedor extends Empleado {
     private double salarioBase;
     private double comision;
@@ -50,3 +45,11 @@ class Vendedor extends Empleado {
         return salarioBase + comision;
     }
 }
+class Prueba {
+    public static void main(String[] args) {
+        Gerente g1 = new Gerente("pedro",100,30);
+        Vendedor v1 = new Vendedor("pablo",67,20);
+        g1.mostrarDetalles();
+        v1.mostrarDetalles();
+    }
+    }
