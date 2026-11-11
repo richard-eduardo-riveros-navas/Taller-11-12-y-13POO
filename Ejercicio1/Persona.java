@@ -1,17 +1,14 @@
 package Ejercicio1;
 
-// Interfaz 1
-public interface Hablador {
+ interface Hablador {
     void hablar();
 }
 
-// Interfaz 2
  interface Trabajador {
     void trabajar();
 }
 
-// Clase Ejercicio1.Persona implementando múltiples interfaces (Herencia Múltiple)
- class Persona implements Hablador, Trabajador {
+ public class Persona implements Hablador, Trabajador {
     @Override
     public void hablar() {
         System.out.println("La persona está hablando en la reunión.");
@@ -23,8 +20,7 @@ public interface Hablador {
     }
 }
 
-// Clase de prueba
- class MainPersona {
+ class pruebaPersona {
     public static void main(String[] args) {
         Persona p = new Persona();
         p.hablar();
