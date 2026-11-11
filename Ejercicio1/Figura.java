@@ -32,7 +32,6 @@ class Triangulo extends Figura {
         return (base * altura) / 2;
     }
 }
-// Archivo: PruebaFigura.java
 class PruebaFigura {
     public static void main(String[] args) {
         Figura rect = new Rectangulo(5.0, 8.0);
