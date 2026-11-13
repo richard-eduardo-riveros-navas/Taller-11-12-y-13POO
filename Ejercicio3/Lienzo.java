@@ -11,16 +11,6 @@ public class Lienzo implements Dibujable {
     }
 }
 abstract class EstructuraBase {
-    // ❌ ERROR DE COMPILACIÓN:
-    // Modifier 'default' not allowed here
-    /*
-    default void procesar() {
-        System.out.println("Procesando...");
-    }
-    */
-
-    // Forma CORRECTA en una clase abstracta:
     public void procesar() {
-        System.out.println("Procesando correctamente en clase abstracta...");
-    }
+       System.out.println("Procesando..."); }
 }
