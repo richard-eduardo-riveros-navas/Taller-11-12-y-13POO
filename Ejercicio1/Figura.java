@@ -1,28 +1,9 @@
 package Ejercicio1;
 
 public abstract class Figura {
-
     public abstract double calcularArea();
-
-    public void mostrarArea() {
-        System.out.println("El área de la figura es: " + calcularArea());
-    }
 }
-
- class Circulo extends Figura {
-    private double radio;
-
-    public Circulo(double radio) {
-        this.radio = radio;
-    }
-
-    @Override
-    public double calcularArea() {
-        return Math.PI * radio * radio;
-    }
-}
-
- class Rectangulo extends Figura {
+class Rectangulo extends Figura {
     private double base;
     private double altura;
 
@@ -36,11 +17,27 @@ public abstract class Figura {
         return base * altura;
     }
 }
-class Prueba {
-    public static void main(String[] args) {
-        Circulo C1 = new Circulo(10);
-        Rectangulo R1 = new Rectangulo(20, 5);
-        C1.mostrarArea();
-        R1.mostrarArea();
+class Triangulo extends Figura {
+    private double base;
+    private double altura;
+
+    public Triangulo(double base, double altura) {
+        this.base = base;
+        this.altura = altura;
+    }
+
+    @Override
+    public double calcularArea() {
+        return (base * altura) / 2;
     }
 }
+class PruebaFigura {
+    public static void main(String[] args) {
+        Figura rect = new Rectangulo(5.0, 8.0);
+        Figura tri = new Triangulo(5.0, 8.0);
+
+        System.out.println("Área del Rectángulo: " + rect.calcularArea());
+        System.out.println("Área del Triángulo: " + tri.calcularArea());
+    }
+}
+
