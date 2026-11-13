@@ -17,7 +17,6 @@ class Rectangulo extends Figura {
         return base * altura;
     }
 }
-// Archivo: Triangulo.java
 class Triangulo extends Figura {
     private double base;
     private double altura;
